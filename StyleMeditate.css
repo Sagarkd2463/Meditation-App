@@ -1,0 +1,118 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url("bg.jpg");
+    background-size: cover;
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.input label{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.input select{
+    border: none;
+    border-radius: 5px;
+    min-width: 300px;
+    font-size: 16px;
+    padding: 10px 4px;
+    background-color: white;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.input select:focus{
+    outline: none;
+}
+
+.circle-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.circle-outline{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 15px solid #f1f1f1;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.circle-progress{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #ff363d;
+    border-radius: 50%;
+    transition: all 4s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.circle-grow{
+    transform: scale(5.4);
+}
+
+.breaths{
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+.instructions{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ff363d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+button:hover{
+    background-color: #f1f1f1;
+    color: #ff363d;
+}
+
+.button-inactive{
+    pointer-events: none;
+    background-color: #969696;
+}
